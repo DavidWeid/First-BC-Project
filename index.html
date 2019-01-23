@@ -109,7 +109,7 @@
   <div class="container">
     <div class="intro">Lets Get Started!</div>
     <div class="row">
-      <div class="col">
+      <div class="col" id="recipeClick">
         <div class="card" style="width: 18rem;">
           <img src="https://www.tastyitaliantravel.com/images/italian-cooking-tours.jpg" class="card-img-top" alt="cook-at-home">
           <div class="card-body">
@@ -137,9 +137,13 @@
         </div>
       </div>
     </div>
-    <div class="container">
+
+
+    <div class="container" id="searchContainer" >
       <div class="start"></div>
 
+      <div class="row">
+        <div class="col-sm-12">
       <!--Search bar for cuisine-->
       <div class="btn-group">
         
@@ -199,11 +203,50 @@
           <button class="dropdown-item locale-item" type="button" value="577">Melbourne</button>
         </div>
 
+        <!-- NEED BUTTON -->
+
+      </div>
+
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="col-sm-12">
+      <div class="btn-group">
+        
+        <!--Actual recipe form input-->
+        <div class="input-group">
+          <input type="text" class="form-control" id="recipeSearchBar" placeholder="Search for a recipe!" aria-label="Recipe Search" />
+          <div class="input-group-append" id="button-addon"></div>
+        </div>
+
+        <!--Button next to form that acts as a dropdown-->
+        <button
+          type="button"
+          class="btn btn-dark dropdown-toggle dropdown-toggle-split"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+
+        <!--This is what is displayed in the dropdown-->
+        <div class="dropdown-menu" id="recipeSelectorDropdown">
+          <button class="dropdown-item recipe-item" type="button" value="Steak">Steak</a>
+          <button class="dropdown-item recipe-item" type="button" value="Chicken">Chicken</button>
+          <button class="dropdown-item recipe-item" type="button" value="Avocado">Avocado</button>
+          <button class="dropdown-item recipe-item" type="button" value="Pasta">Pasta</button>
+          <button class="dropdown-item recipe-item" type="button" value="Fruit">Fruit</button>
+        </div>
+      </div>
+
+      </div>
       </div>
 
       <br/><br/>
     
-      <button type="button" class="btn btn-dark mb-5" id="userSubmit">Submit</button>
+      <button type="button" class="btn btn-dark mb-5" id="recipeUserSubmit">Submit</button>
 
     </div>
 
@@ -221,4 +264,6 @@
       crossorigin="anonymous"></script>
     <!--OWN JS-->
     <script type="text/javascript" src="assets/js/projectOne.js"></script>
+
+    <script type="text/javascript" src="assets/js/edamam.js"></script>
 </html>
